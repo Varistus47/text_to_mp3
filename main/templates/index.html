@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div class="container mt-5">
+    <form action="{% url 'index' %}" method="post">
+        {%csrf_token%}
+        <input class="form-control" type="text" name="txt" id="txt" placeholder="Enter text">
+        <div class="d-flex justify-content-center mt-3">
+            <input type="submit" value="Download Audio" class="btn btn-success">
+        </div>
+    </form>
+</div>
+{%endblock%}
